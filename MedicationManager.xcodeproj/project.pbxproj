@@ -19,6 +19,13 @@
 		83021A69273C4B3700074406 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A68273C4B3700074406 /* MedicationController.swift */; };
 		83021A6B273C4E5F00074406 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A6A273C4E5F00074406 /* CoreDataStack.swift */; };
 		83021A6D273C553B00074406 /* Medication+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A6C273C553B00074406 /* Medication+Convenience.swift */; };
+		83021A6F273C6A4900074406 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A6E273C6A4900074406 /* DateFormatter.swift */; };
+		83021A71273C946A00074406 /* TakenDate+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A70273C946A00074406 /* TakenDate+Convenience.swift */; };
+		83021A73273D6C6500074406 /* MoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A72273D6C6500074406 /* MoodSurveyViewController.swift */; };
+		83021A75273D705D00074406 /* MoodSurvey+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A74273D705D00074406 /* MoodSurvey+Convenience.swift */; };
+		83021A77273D710300074406 /* MoodSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A76273D710300074406 /* MoodSurveyController.swift */; };
+		83021A9B273EAF5000074406 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A9A273EAF5000074406 /* NotificationScheduler.swift */; };
+		83021A9D273EE12B00074406 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83021A9C273EE12B00074406 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		83021A68273C4B3700074406 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
 		83021A6A273C4E5F00074406 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		83021A6C273C553B00074406 /* Medication+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+Convenience.swift"; sourceTree = "<group>"; };
+		83021A6E273C6A4900074406 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		83021A70273C946A00074406 /* TakenDate+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TakenDate+Convenience.swift"; sourceTree = "<group>"; };
+		83021A72273D6C6500074406 /* MoodSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurveyViewController.swift; sourceTree = "<group>"; };
+		83021A74273D705D00074406 /* MoodSurvey+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodSurvey+Convenience.swift"; sourceTree = "<group>"; };
+		83021A76273D710300074406 /* MoodSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurveyController.swift; sourceTree = "<group>"; };
+		83021A9A273EAF5000074406 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		83021A9C273EE12B00074406 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,9 @@
 				83021A46273C36CD00074406 /* SceneDelegate.swift */,
 				83021A50273C36CF00074406 /* Assets.xcassets */,
 				83021A55273C36CF00074406 /* Info.plist */,
+				83021A6E273C6A4900074406 /* DateFormatter.swift */,
+				83021A9A273EAF5000074406 /* NotificationScheduler.swift */,
+				83021A9C273EE12B00074406 /* Strings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -102,6 +119,7 @@
 			children = (
 				83021A5E273C474800074406 /* MedicationListViewController.swift */,
 				83021A60273C475B00074406 /* MedicationDetailViewController.swift */,
+				83021A72273D6C6500074406 /* MoodSurveyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -112,6 +130,8 @@
 				83021A4D273C36CD00074406 /* MedicationManager.xcdatamodeld */,
 				83021A6A273C4E5F00074406 /* CoreDataStack.swift */,
 				83021A6C273C553B00074406 /* Medication+Convenience.swift */,
+				83021A70273C946A00074406 /* TakenDate+Convenience.swift */,
+				83021A74273D705D00074406 /* MoodSurvey+Convenience.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -129,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				83021A68273C4B3700074406 /* MedicationController.swift */,
+				83021A76273D710300074406 /* MoodSurveyController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -204,15 +225,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83021A77273D710300074406 /* MoodSurveyController.swift in Sources */,
 				83021A6D273C553B00074406 /* Medication+Convenience.swift in Sources */,
+				83021A9D273EE12B00074406 /* Strings.swift in Sources */,
 				83021A61273C475B00074406 /* MedicationDetailViewController.swift in Sources */,
 				83021A45273C36CD00074406 /* AppDelegate.swift in Sources */,
 				83021A5F273C474800074406 /* MedicationListViewController.swift in Sources */,
+				83021A6F273C6A4900074406 /* DateFormatter.swift in Sources */,
 				83021A4F273C36CD00074406 /* MedicationManager.xcdatamodeld in Sources */,
+				83021A9B273EAF5000074406 /* NotificationScheduler.swift in Sources */,
 				83021A69273C4B3700074406 /* MedicationController.swift in Sources */,
 				83021A64273C48CB00074406 /* MedicationTableViewCell.swift in Sources */,
+				83021A75273D705D00074406 /* MoodSurvey+Convenience.swift in Sources */,
 				83021A47273C36CD00074406 /* SceneDelegate.swift in Sources */,
+				83021A73273D6C6500074406 /* MoodSurveyViewController.swift in Sources */,
 				83021A6B273C4E5F00074406 /* CoreDataStack.swift in Sources */,
+				83021A71273C946A00074406 /* TakenDate+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

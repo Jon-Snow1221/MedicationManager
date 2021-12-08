@@ -9,6 +9,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Mood Survey View Controller-->
+        <scene sceneID="0vf-Oo-aUb">
+            <objects>
+                <viewController storyboardIdentifier="moodSurveyViewController" id="fQj-V8-ru1" customClass="MoodSurveyViewController" customModule="MedicationManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4jC-CY-P85">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0We-VX-ceh">
+                                <rect key="frame" x="30" y="30" width="44" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="fQj-V8-ru1" eventType="touchUpInside" id="Shb-UZ-CYc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today I'm feeling:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNf-e2-6WD">
+                                <rect key="frame" x="85.5" y="181" width="243" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="6ph-K2-Rb4">
+                                <rect key="frame" x="162" y="270" width="90" height="380"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-HM-VMY">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="Lut-GJ-tCm"/>
+                                            <constraint firstAttribute="width" secondItem="3f5-HM-VMY" secondAttribute="height" multiplier="1:1" id="oIN-XT-Ngp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="😀"/>
+                                        <connections>
+                                            <action selector="emojiTapped:" destination="fQj-V8-ru1" eventType="touchUpInside" id="6Qu-tt-JmA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl5-2W-cun">
+                                        <rect key="frame" x="0.0" y="145" width="90" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="😏"/>
+                                        <connections>
+                                            <action selector="emojiTapped:" destination="fQj-V8-ru1" eventType="touchUpInside" id="Oh3-lh-Gi6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5q-H9-9Rg">
+                                        <rect key="frame" x="0.0" y="290" width="90" height="90"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="😔"/>
+                                        <connections>
+                                            <action selector="emojiTapped:" destination="fQj-V8-ru1" eventType="touchUpInside" id="Zgb-we-Th5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rdo-ds-n4B"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="0We-VX-ceh" firstAttribute="top" secondItem="Rdo-ds-n4B" secondAttribute="top" constant="30" id="Nlm-Mm-pOe"/>
+                            <constraint firstItem="6ph-K2-Rb4" firstAttribute="centerX" secondItem="Rdo-ds-n4B" secondAttribute="centerX" id="Suv-90-ur3"/>
+                            <constraint firstItem="jNf-e2-6WD" firstAttribute="centerX" secondItem="Rdo-ds-n4B" secondAttribute="centerX" id="dKn-sD-Zvf"/>
+                            <constraint firstItem="Rdo-ds-n4B" firstAttribute="trailing" secondItem="0We-VX-ceh" secondAttribute="trailing" constant="340" id="gNm-ki-zDg"/>
+                            <constraint firstItem="jNf-e2-6WD" firstAttribute="top" secondItem="0We-VX-ceh" secondAttribute="bottom" constant="120" id="opc-d2-7nz"/>
+                            <constraint firstItem="0We-VX-ceh" firstAttribute="leading" secondItem="Rdo-ds-n4B" secondAttribute="leading" constant="30" id="v1R-zu-QBu"/>
+                            <constraint firstItem="6ph-K2-Rb4" firstAttribute="top" secondItem="jNf-e2-6WD" secondAttribute="bottom" constant="50" id="xzE-oC-GbO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRZ-hy-EaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257.97101449275362" y="-485.49107142857139"/>
+        </scene>
         <!--Medication List View Controller-->
         <scene sceneID="cR2-9X-bSf">
             <objects>
@@ -18,10 +97,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8cq-V6-AbY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="medicationCell" rowHeight="85" id="EAb-OI-GPb" customClass="MedicationTableViewCell" customModule="MedicationManager" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="medicationCell" rowHeight="85" id="EAb-OI-GPb" customClass="MedicationTableViewCell" customModule="MedicationManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAb-OI-GPb" id="QNP-st-n95">
@@ -40,7 +119,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-Bt-qa6">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-Bt-qa6">
                                                     <rect key="frame" x="337" y="8" width="69" height="69"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="U0k-Bt-qa6" secondAttribute="height" multiplier="1:1" id="6bI-m1-3JE"/>
@@ -75,15 +154,55 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="T83-Wb-0hj" id="oeb-pw-lu6"/>
+                                    <outlet property="delegate" destination="T83-Wb-0hj" id="8zV-Kv-pjD"/>
+                                </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-R0-O95">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-PI-3p9">
+                                        <rect key="frame" x="354" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Kdg-PI-3p9" secondAttribute="height" multiplier="1:1" id="tYM-De-U2S"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="❓"/>
+                                        <connections>
+                                            <action selector="surveyButtonTapped:" destination="T83-Wb-0hj" eventType="touchUpInside" id="fqB-NB-1a5"/>
+                                            <segue destination="fQj-V8-ru1" kind="presentation" identifier="toMoodSurveyViewController" id="Mkp-Ps-lUw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Today I am feeling: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gns-rk-ilE">
+                                        <rect key="frame" x="16" y="12" width="322" height="36"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12141626750644754" green="0.6617007662537816" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Kdg-PI-3p9" firstAttribute="leading" secondItem="gns-rk-ilE" secondAttribute="trailing" constant="16" id="6CN-qN-C5i"/>
+                                    <constraint firstItem="Kdg-PI-3p9" firstAttribute="top" secondItem="fx1-R0-O95" secondAttribute="top" constant="8" id="MFb-Vb-fjy"/>
+                                    <constraint firstAttribute="bottom" secondItem="gns-rk-ilE" secondAttribute="bottom" constant="12" id="NeM-1Z-dHx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kdg-PI-3p9" secondAttribute="trailing" constant="16" id="Qy4-Gh-m00"/>
+                                    <constraint firstItem="gns-rk-ilE" firstAttribute="leading" secondItem="fx1-R0-O95" secondAttribute="leading" constant="16" id="Ynw-S5-qMo"/>
+                                    <constraint firstItem="gns-rk-ilE" firstAttribute="top" secondItem="fx1-R0-O95" secondAttribute="top" constant="12" id="hv4-7f-oBA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kdg-PI-3p9" secondAttribute="bottom" constant="8" id="xz0-UD-yEL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qz9-uL-9aT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8cq-V6-AbY" firstAttribute="leading" secondItem="qz9-uL-9aT" secondAttribute="leading" id="9Op-2L-HQs"/>
+                            <constraint firstItem="fx1-R0-O95" firstAttribute="top" secondItem="qz9-uL-9aT" secondAttribute="top" id="Idn-Pc-V1B"/>
+                            <constraint firstItem="qz9-uL-9aT" firstAttribute="trailing" secondItem="fx1-R0-O95" secondAttribute="trailing" id="lKg-WT-PzU"/>
                             <constraint firstItem="qz9-uL-9aT" firstAttribute="bottom" secondItem="8cq-V6-AbY" secondAttribute="bottom" id="qNO-bK-Wu5"/>
                             <constraint firstItem="qz9-uL-9aT" firstAttribute="trailing" secondItem="8cq-V6-AbY" secondAttribute="trailing" id="r3f-Zo-kuI"/>
-                            <constraint firstItem="8cq-V6-AbY" firstAttribute="top" secondItem="qz9-uL-9aT" secondAttribute="top" id="tfL-FO-Lv3"/>
+                            <constraint firstItem="8cq-V6-AbY" firstAttribute="top" secondItem="fx1-R0-O95" secondAttribute="bottom" id="tfL-FO-Lv3"/>
+                            <constraint firstItem="fx1-R0-O95" firstAttribute="leading" secondItem="qz9-uL-9aT" secondAttribute="leading" id="vn2-Md-hEE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mb4-Ia-2Ud">
@@ -94,6 +213,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="moodSurveyButton" destination="Kdg-PI-3p9" id="AMi-lG-a5U"/>
+                        <outlet property="tableView" destination="8cq-V6-AbY" id="0Ce-Ms-FTi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wa9-0n-S2E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,12 +300,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Uh-4F-aHc"/>
+        <segue reference="3cW-gh-BaC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
